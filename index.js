@@ -32,7 +32,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "contribut",
+        name: "contribute",
         message: "What are the contribution guidelines?: "
     },
     {
