@@ -4,7 +4,7 @@ function generateMarkdown(data) {
 
   
   ## Description:
-    ${description}
+    ${data.description}
   
   ## Table of Contents:
     <a href src= "#Description">Description</a>
@@ -17,23 +17,23 @@ function generateMarkdown(data) {
     <a href src= "#Questions">Questions</a>
   
   ## Installation Instructions:
-  ${installation}
+  ${data.installation}
   
   ## Usage:
-  ${usage}
+  ${data.usage}
   
   ## License: 
-  ${license}
+  ${data.license}
 
   ## Contribution Guidelines: 
-  ${contribute}
+  ${data.contribute}
 
   ## Test Instructions: 
-  ${testInst}
+  ${data.testInst}
   
   ## Questions:
-  Check out my GitHub: https://github.com/${github}
-  Or if you have any questions email me: ${email}
+  Check out my GitHub: https://github.com/${data.github}
+  Or if you have any questions email me: ${data.email}
 
 `;
 }
