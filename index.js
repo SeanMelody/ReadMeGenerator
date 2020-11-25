@@ -62,12 +62,13 @@ function writeToFile(ReadMe, data) {
 
 // function to initialize program
 function init() {
-    inquirer.prompt(questions)
+    inquirer
+        .prompt(questions)
         .then()
-    const data = generateMarkdown(questions)
-    const name = "example"
-    )
-    writeToFile(name, data)
+    // const data = generateMarkdown(questions)
+    //     const name = "example"
+    //     )
+    //     writeToFile(name, data)
 
 }
 
