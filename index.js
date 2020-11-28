@@ -19,11 +19,6 @@ const questions = [
     },
     {
         type: "input",
-        name: "tableOfContents",
-        message: "Please enter the Table of Contents: "
-    },
-    {
-        type: "input",
         name: "installation",
         message: "How would you install this project?: "
     },
@@ -48,6 +43,17 @@ const questions = [
         name: "testInst",
         message: "Any test instructions?: "
     },
+    {
+        type: "input",
+        name: "github",
+        message: "GitHub Name: "
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "email: "
+    },
+
 
 ];
 
@@ -66,7 +72,7 @@ function init() {
         .prompt(questions)
         .then(function generateMarkdown() {
         })
-        .then(console.log("All Done"))
+    // .then(console.log("All Done"))
     // .then(console.log("Done"))
     //     .then({ data }) => {
     //     const data = generateMarkdown(questions)
