@@ -36,7 +36,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "please pick a license: ",
-        choices: ["Apache", "MIT", "Mozilla", "Unlicense"],
+        choices: ["Apache", "MIT", "Mozilla", "Unlicense", "WTFPL"],
     },
     {
         type: "input",
@@ -64,8 +64,13 @@ function writeToFile(ReadMe, data) {
 function init() {
     inquirer
         .prompt(questions)
-        .then()
-    // const data = generateMarkdown(questions)
+        .then(function generateMarkdown() {
+        })
+        .then(console.log("All Done"))
+    // .then(console.log("Done"))
+    //     .then({ data }) => {
+    //     const data = generateMarkdown(questions)
+    // }
     //     const name = "example"
     //     )
     //     writeToFile(name, data)

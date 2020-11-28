@@ -7,7 +7,7 @@ function generateMarkdown(data) {
   }
   if (data.license === "MIT") {
     console.log("I picked MIT")
-    licenseShield = `<img src="https://img.shields.io/badge/LICENSE-mit-green"/>`
+    licenseShield = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   }
   if (data.license === "Mozilla") {
     console.log("I picked Mozilla")
@@ -16,6 +16,10 @@ function generateMarkdown(data) {
   if (data.license === "Unlicense") {
     console.log("I picked Unlicense")
     licenseShield = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+  }
+  if (license === "WTFPL") {
+    console.log("I picked WTFPL")
+    licenseShield = "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)"
   }
 
 
