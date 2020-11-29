@@ -9,7 +9,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 // const theMarkdown = require("./utils/generateMarkdown");
 
 // const generateTheMarkdown = require("./utils/generateMarkdown.js");
-// const writeTheFile = util.promisify(fs.writeFile);
+const writeNewFile = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -66,14 +66,24 @@ const questions = [
 
 
 // function to write README file
-function writeToFile(ReadMe, data) {
+
+function writeToFile() {
+    // console.log(generateMarkdown)
+
     // console.log(data)
 
-    // writeTheFile("ReadMe.md", data)
+    // writeTheFile("ReadMe.md", generateMarkdown())
     // .then(console.log("ReadMeWritten"))
     // .catch((err) => console.log(err));
     // .then(() => console.log("ReadMe Written"))
-    return writeToFile(ReadMe, data)
+
+    // writeNewFile("ReadMe.md", ReadMe)
+    //     .then(() => console.log("ReadMeWritten"))
+    //     .catch((err) => console.log(err));
+    // return writeNewFile("ReadMe.md", ReadMe)
+
+
+    return writeToFile(generateMarkdown())
 }
 
 // function to initialize program
@@ -91,8 +101,9 @@ function init() {
 
 
             generateMarkdown(data)
+            console.log(generateMarkdown(data))
+            // .then(writeToFile())
         })
-        // .then
         // .then(writeToFile())
         // .then(function generateMarkdown() {
 
