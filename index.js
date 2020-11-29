@@ -3,14 +3,16 @@ const inquirer = require("inquirer")
 const util = require("util");
 // const generateMarkdown = require("./utils/generateMarkdown.js");
 const generateMarkdown = require("./utils/generateMarkdown");
+const writeNewFile = util.promisify(fs.writeFile);
 let readMeContents = ""
+let filename = "test.txt"
 
 // data = {}
 
 // const theMarkdown = require("./utils/generateMarkdown");
 
 // const generateTheMarkdown = require("./utils/generateMarkdown.js");
-const writeNewFile = util.promisify(fs.writeFile);
+
 
 // array of questions for user
 const questions = [
@@ -68,7 +70,14 @@ const questions = [
 
 // function to write README file
 
-// function writeToFile() {
+function writeToFile(filename, readMeContents) {
+
+
+    writeNewFile("ReadMe.md", readMeContents)
+        .then(() => console.log("ReadMeWritten"))
+        .catch((err) => console.log(err));
+    return writeNewFile("ReadMe.md", readMeContents)
+}
 //     // console.log(generateMarkdown)
 
 //     // console.log("Write to file")
@@ -100,7 +109,9 @@ function init() {
         // })
 
         .then(function getMarkdown(data) {
-            console.log(data)
+
+
+            // console.log(data)
 
 
             // generateMarkdown(data)
@@ -109,14 +120,14 @@ function init() {
             // console.log(generateMarkdown(data))
 
             readMeContents = generateMarkdown(data)
-            console.log(readMeContents)
+            // console.log(readMeContents)
 
+            writeToFile(filename, readMeContents)
 
-            const writeNewFile = util.promisify(fs.writeFile);
-            writeNewFile("ReadMe.md", readMeContents)
-                .then(() => console.log("ReadMeWritten"))
-                .catch((err) => console.log(err));
-            return writeNewFile("ReadMe.md", readMeContents)
+            // writeNewFile("ReadMe.md", readMeContents)
+            //     .then(() => console.log("ReadMeWritten"))
+            //     .catch((err) => console.log(err));
+            // return writeNewFile("ReadMe.md", readMeContents)
 
             // .then()=> writeToFile(readMeContents))
             // .then(writeToFile())
