@@ -3,6 +3,7 @@ const inquirer = require("inquirer")
 const util = require("util");
 // const generateMarkdown = require("./utils/generateMarkdown.js");
 const generateMarkdown = require("./utils/generateMarkdown");
+let readMeContents = ""
 
 // data = {}
 
@@ -67,24 +68,26 @@ const questions = [
 
 // function to write README file
 
-function writeToFile() {
-    // console.log(generateMarkdown)
+// function writeToFile() {
+//     // console.log(generateMarkdown)
 
-    // console.log(data)
+//     // console.log("Write to file")
+//     writeNewFile("ReadMe.md", readMeContents)
+//         .then(() => console.log("ReadMeWritten"))
+//         .catch((err) => console.log(err));
+//     return writeNewFile("ReadMe.md", readMeContents)
+//     console.log(readMeContents)
 
-    // writeTheFile("ReadMe.md", generateMarkdown())
-    // .then(console.log("ReadMeWritten"))
-    // .catch((err) => console.log(err));
-    // .then(() => console.log("ReadMe Written"))
+// writeTheFile("ReadMe.md", generateMarkdown())
+// .then(console.log("ReadMeWritten"))
+// .catch((err) => console.log(err));
+// .then(() => console.log("ReadMe Written"))
 
-    // writeNewFile("ReadMe.md", ReadMe)
-    //     .then(() => console.log("ReadMeWritten"))
-    //     .catch((err) => console.log(err));
-    // return writeNewFile("ReadMe.md", ReadMe)
-
-
-    return writeToFile(generateMarkdown())
-}
+// writeNewFile("ReadMe.md", ReadMe)
+//     .then(() => console.log("ReadMeWritten"))
+//     .catch((err) => console.log(err));
+// return writeNewFile("ReadMe.md", ReadMe)
+// }
 
 // function to initialize program
 function init() {
@@ -100,15 +103,42 @@ function init() {
             console.log(data)
 
 
-            generateMarkdown(data)
-            console.log(generateMarkdown(data))
+            // generateMarkdown(data)
+
+
+            // console.log(generateMarkdown(data))
+
+            readMeContents = generateMarkdown(data)
+            console.log(readMeContents)
+
+
+            const writeNewFile = util.promisify(fs.writeFile);
+            writeNewFile("ReadMe.md", readMeContents)
+                .then(() => console.log("ReadMeWritten"))
+                .catch((err) => console.log(err));
+            return writeNewFile("ReadMe.md", readMeContents)
+
+            // .then()=> writeToFile(readMeContents))
             // .then(writeToFile())
         })
-        // .then(writeToFile())
+
+
+
+        // .then(function writeToFile(filename, contents) {
+        //     writeNewFile("ReadMe.md", readMeContents)
+        //         .then(() => console.log("ReadMeWritten"))
+        //         .catch((err) => console.log(err));
+        //     return writeToFile("ReadMe.md", readMeContents)
+
+
+        // })
+
+        // .then(writeToFile(generateMarkdown(data)))
         // .then(function generateMarkdown() {
 
         // })
         .catch((err) => console.log(err));
+
 
 
     // .then(console.log("All Done"))

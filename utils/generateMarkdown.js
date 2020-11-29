@@ -27,14 +27,14 @@ function generateMarkdown(data) {
 
 
   return `# ${data.title} 
-  ${licenseShield}
+${licenseShield}
 
-  ## Description
+## Description
 
-      ${data.description}
+  ${data.description}
 
 
-  ## Table of Contents
+## Table of Contents
 
   [Description](##Description)
 
@@ -49,36 +49,35 @@ function generateMarkdown(data) {
   [Tests](##Tests)
 
 
-  ## Installation
+## Installation
 
-      ${data.installation}
+    ${data.installation}
 
-  ## Usage
+## Usage
 
-      ${data.usage}
+    ${data.usage}
 
-  ## License
+## License
 
-      This application is covered under the ${data.license} License
+    This application is covered under the ${data.license} License
 
-  ## Contributing
+## Contributing
 
-      ${data.contribute}
+    ${data.contribute}
 
-  ## Tests
+## Tests
 
-      ${data.testInst}
+    ${data.testInst}
 
 
-  Questions?
+Questions?
 
-  Check out my GitHub:
+    Check out my GitHub:
 
-  [github.com/${data.github}](https://github.com/${data.github})
+    [github.com/${data.github}](https://github.com/${data.github})
 
-  Or if you have any questions email me: 
-
-  ${data.email}`
+    Or if you have any questions email me: 
+      ${data.email}`
     ;
 
 }
