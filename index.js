@@ -1,9 +1,15 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
 const util = require("util");
-
+// const generateMarkdown = require("./utils/generateMarkdown.js");
 const generateMarkdown = require("./utils/generateMarkdown");
-const writeTheFile = util.promisify(fs.writeFile);
+
+// data = {}
+
+// const theMarkdown = require("./utils/generateMarkdown");
+
+// const generateTheMarkdown = require("./utils/generateMarkdown.js");
+// const writeTheFile = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -57,21 +63,43 @@ const questions = [
 
 ];
 
+
+
 // function to write README file
 function writeToFile(ReadMe, data) {
+    // console.log(data)
 
-    writeTheFile(ReadMe, data)
-        .then(() => console.log("ReadMeWritten"))
-        .catch((err) => console.log(err));
-    return writeFileTest(ReadMe, data)
+    // writeTheFile("ReadMe.md", data)
+    // .then(console.log("ReadMeWritten"))
+    // .catch((err) => console.log(err));
+    // .then(() => console.log("ReadMe Written"))
+    return writeToFile(ReadMe, data)
 }
 
 // function to initialize program
 function init() {
     inquirer
         .prompt(questions)
-        .then(function generateMarkdown() {
+
+        // .then(function generateMarkdown(data) {
+
+        //     console.log(data)
+        // })
+
+        .then(function getMarkdown(data) {
+            console.log(data)
+
+
+            generateMarkdown(data)
         })
+        // .then
+        // .then(writeToFile())
+        // .then(function generateMarkdown() {
+
+        // })
+        .catch((err) => console.log(err));
+
+
     // .then(console.log("All Done"))
     // .then(console.log("Done"))
     //     .then({ data }) => {
@@ -83,5 +111,7 @@ function init() {
 
 }
 
+// writeToFile()
+// .then(console.log("ReadMe written"))
 // function call to initialize program
 init();
