@@ -1,14 +1,30 @@
+// Constants Declared First
+
+// Required Consts
+
+// FS for writing the readme
 const fs = require("fs")
+// Using the Inquirer Package
 const inquirer = require("inquirer")
+// Util here
 const util = require("util");
 
+// Linking the Generate Markdown JS
 const generateMarkdown = require("./utils/generateMarkdown");
+// For writing the new file
 const writeNewFile = util.promisify(fs.writeFile);
+
+// declaring the variables
+
+// ReadMe contents string
 let readMeContents = ""
-let filename = "test.txt"
+// Filname string
+let filename = ""
 
 
 // array of questions for user
+
+// 9 questions 1 with drop down guesses
 const questions = [
     {
         type: "input",
@@ -59,33 +75,40 @@ const questions = [
 ];
 
 // function to write README file
-
 function writeToFile(filename, readMeContents) {
 
-
+    // Write the file, named ReadMe.md, with the ReadMe Contents
     writeNewFile("ReadMe.md", readMeContents)
+        // Notify that the readme is written
         .then(() => console.log("ReadMeWritten"))
+        // Catch the errors
         .catch((err) => console.log(err));
+    // Return the function
     return writeNewFile("ReadMe.md", readMeContents)
 }
 
-// function to initialize program
+// function to initialize the program
 function init() {
+    // Using Inquirer 
     inquirer
+        // Prompt the questions
         .prompt(questions)
-
+        // function to send data from questions to the Generate Markdown js file
         .then(function getMarkdown(data) {
             // console.log(data)
             // generateMarkdown(data)
             // console.log(generateMarkdown(data))
 
+            // Set the return from getMarkdown function to a variable
             readMeContents = generateMarkdown(data)
 
+            // Invoke the WriteToFile function
             writeToFile(filename, readMeContents)
-
         })
-
+        // Catch the errors!
         .catch((err) => console.log(err));
 
 }
+
+// Calling the Init function to start the Generator
 init();
