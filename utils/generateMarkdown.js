@@ -27,11 +27,12 @@ function generateMarkdown(data) {
 
 
   return `# ${data.title} 
+
 ${licenseShield}
 
 ## Description
 
-  ${data.description}
+    ${data.description}
 
 
 ## Table of Contents
@@ -70,18 +71,17 @@ ${licenseShield}
     ${data.testInst}
 
 
-Questions?
+## Questions?
 
-    Check out my GitHub:
+  Check out my GitHub:
 
-    [github.com/${data.github}](https://github.com/${data.github})
+  [github.com/${data.github}](https://github.com/${data.github})
 
-    Or if you have any questions email me: 
-      ${data.email}`
+  Or if you have any questions email me: 
+    ${data.email}`
     ;
 
 }
-// console.log("End of return")
 
 module.exports = generateMarkdown;
 
