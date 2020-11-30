@@ -80,7 +80,7 @@ function writeToFile(filename, readMeContents) {
     // Write the file, named ReadMe.md, with the ReadMe Contents
     writeNewFile("ReadMe.md", readMeContents)
         // Notify that the readme is written
-        .then(() => console.log("ReadMeWritten"))
+        .then(() => console.log("Your new ReadMe is Written"))
         // Catch the errors
         .catch((err) => console.log(err));
     // Return the function
