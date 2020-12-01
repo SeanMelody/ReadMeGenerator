@@ -104,6 +104,7 @@ function init() {
         // Catch the errors!
         .catch((err) => console.log(err));
 
+    // End of Init Function
 }
 
 // Calling the Init function to start the Generator

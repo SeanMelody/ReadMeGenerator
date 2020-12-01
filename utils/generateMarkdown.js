@@ -80,7 +80,9 @@ ${licenseShield}
     ${data.email}`
     ;
 
+  // End of Function
 }
+
 
 // module exports to let the generate markdown be used in the program
 module.exports = generateMarkdown;
