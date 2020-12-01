@@ -1,5 +1,6 @@
 # ReadMeGenerator
 A node.js ReadMe generator
+
 <img src="https://img.shields.io/badge/LICENSE-mit-green"/>
 
 A Command Line ReadMe Generator using Node.js!
@@ -42,6 +43,7 @@ Part 3:
 ![ReadMeVideo-3](https://user-images.githubusercontent.com/68625400/100691109-d3d5f180-333c-11eb-8815-1680b4d52c2f.gif)
 
 ScreenShot Walk Through:
+
 ![ReadMe-Generator-1](https://user-images.githubusercontent.com/68625400/100689590-9885f380-3339-11eb-9e65-9e9ae74dfa19.png)
 ![ReadMe-Generator-2](https://user-images.githubusercontent.com/68625400/100689594-991e8a00-3339-11eb-92e7-ab794cb058f6.png)
 ![ReadMe-Generator-3](https://user-images.githubusercontent.com/68625400/100689596-9a4fb700-3339-11eb-8306-a9b8be0b9237.png)
