@@ -28,6 +28,14 @@ In addition, the table of contents has working links to take you the different p
 
 Video Walk Through:
 ![Sean Melody's node ReadMe Generator](https://user-images.githubusercontent.com/68625400/100689874-2feb4680-333a-11eb-9602-b200a6817f23.gif)
+Part 1
+![ReadMeVideo-1](https://user-images.githubusercontent.com/68625400/100690929-6e820080-333c-11eb-927a-b32ce1f65245.gif)
+
+Part 2
+![ReadMeVideo-2](https://user-images.githubusercontent.com/68625400/100690978-8eb1bf80-333c-11eb-8576-b1c5e83a1c5c.gif)
+
+Part 3
+![ReadMeVideo-3](https://user-images.githubusercontent.com/68625400/100691109-d3d5f180-333c-11eb-8815-1680b4d52c2f.gif)
 
 ScreenShot Walk Through:
 ![ReadMe-Generator-1](https://user-images.githubusercontent.com/68625400/100689590-9885f380-3339-11eb-9e65-9e9ae74dfa19.png)
