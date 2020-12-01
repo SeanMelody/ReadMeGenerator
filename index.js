@@ -1,5 +1,4 @@
 // Constants Declared First
-
 // Required Consts
 
 // FS for writing the readme
@@ -80,7 +79,7 @@ function writeToFile(filename, readMeContents) {
     // Write the file, named ReadMe.md, with the ReadMe Contents
     writeNewFile("ReadMe.md", readMeContents)
         // Notify that the readme is written
-        .then(() => console.log("Your new ReadMe is Written"))
+        .then(() => console.log("Your new ReadMe is Ready"))
         // Catch the errors
         .catch((err) => console.log(err));
     // Return the function
