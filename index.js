@@ -94,9 +94,6 @@ function init() {
         .prompt(questions)
         // function to send data from questions to the Generate Markdown js file
         .then(function getMarkdown(data) {
-            // console.log(data)
-            // generateMarkdown(data)
-            // console.log(generateMarkdown(data))
 
             // Set the return from getMarkdown function to a variable
             readMeContents = generateMarkdown(data)
